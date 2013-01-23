@@ -21,7 +21,7 @@ When you're done editing this file, save it, commit it, and push it to your "ass
     // Boolean: true
 ```
 
-`path/to/file.js:42`
+`path/to/file.js:42`    
 ```javascript
     var name = do_something_amazing() + 1;
     // Variable: name
@@ -31,3 +31,35 @@ When you're done editing this file, save it, commit it, and push it to your "ass
 
 ## Now get to it!
 
+`rwoodie/scriptaculous/lib/prototype.js`
+```var Draggable = Class.create({
+  initialize: function(element) {
+  // Variable: Draggable
+  //Function: Class.create({initialize: function(element)
+    var defaults = {
+      handle: false,
+      reverteffect: function(element, top_offset, left_offset) {
+        var dur = Math.sqrt(Math.abs(top_offset^2)+Math.abs(left_offset^2))*0.02;
+        new Effect.Move(element, { x: -left_offset, y: -top_offset, duration: dur,
+          queue: {scope:'_draggable', position:'end'}
+        });
+      },
+      endeffect: function(element) {
+        var toOpacity = Object.isNumber(element._opacity) ? element._opacity : 1.0;
+        new Effect.Opacity(element, {duration:0.2, from:0.7, to:toOpacity,
+          queue: {scope:'_draggable', position:'end'},
+          afterFinish: function(){
+            Draggable._dragging[element] = false
+          }
+        });
+      },
+      zindex: 1000,
+      revert: false,
+      quiet: false,
+      scroll: false,
+      scrollSensitivity: 20,
+      scrollSpeed: 15,
+      snap: false,  // false, or xy or [x,y] or function(x,y){ return [x,y] }
+      delay: 0
+    };
+    ```
