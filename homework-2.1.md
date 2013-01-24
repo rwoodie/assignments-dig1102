@@ -63,3 +63,46 @@ When you're done editing this file, save it, commit it, and push it to your "ass
       delay: 0
     };
     ```
+    
+    `rwoodie/scriptaculous/src/builder.js`
+    ```var parentTag = this.NODEMAP[elementName] || 'div';
+    var parentElement = document.createElement(parentTag);
+    // Variable: parentElement
+    // Function: document.createElement(parentTag)
+    try { // prevent IE "feature": http://dev.rubyonrails.org/ticket/2707
+      parentElement.innerHTML = "<" + elementName + "></" + elementName + ">";
+    } catch(e) {}
+    var element = parentElement.firstChild || null;
+
+    // see if browser added wrapping tags
+    if(element && (element.tagName.toUpperCase() != elementName))
+      element = element.getElementsByTagName(elementName)[0];
+
+    // fallback to createElement approach
+    if(!element) element = document.createElement(elementName);
+
+    // abort if nothing could be created
+    if(!element) return;
+
+    // attributes (or text)
+    if(arguments[1])
+      if(this._isStringOrNumber(arguments[1]) ||
+        (arguments[1] instanceof Array) ||
+        arguments[1].tagName) {
+          this._children(element, arguments[1]);
+        } 
+    // if...else
+    // Condition1: (this._isStringOrNumber(arguments[1])
+    // Condition2: (arguments[1] instanceof Array) ||
+        arguments[1].tagName)
+    // Statement: this._children(element, arguments[1])
+        else {
+          var attrs = this._attributes(arguments[1]);
+          if(attrs.length) {
+            try { // prevent IE "feature": http://dev.rubyonrails.org/ticket/2707
+              parentElement.innerHTML = "<" +elementName + " " +
+                attrs + "></" + elementName + ">";
+            } catch(e) {}
+            element = parentElement.firstChild || null;
+    ```
+    
