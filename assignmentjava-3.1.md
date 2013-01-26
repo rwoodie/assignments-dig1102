@@ -17,6 +17,7 @@ var Behave = Behave || function (userOpts) {
             return half + half;
         };
     }
+```
 
 * The white spacing is really good and nice to read
 * Semicolons are used at the end of statements
@@ -24,6 +25,7 @@ var Behave = Behave || function (userOpts) {
 * Indentation is used really good. 
 * Not sure what the >>> signs rpresent in line 34
 
+```javascript
     if (typeof Array.prototype.filter !== 'function') {
         Array.prototype.filter = function(func /*, thisp */) {
             if (this == null) {
