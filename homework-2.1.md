@@ -32,7 +32,8 @@ When you're done editing this file, save it, commit it, and push it to your "ass
 ## Now get to it!
 
 `rwoodie/scriptaculous/lib/prototype.js`
-```var Draggable = Class.create({
+```javascript
+  var Draggable = Class.create({
   initialize: function(element) {
   // Variable: Draggable
   //Function: Class.create({initialize: function(element)
@@ -62,10 +63,11 @@ When you're done editing this file, save it, commit it, and push it to your "ass
       snap: false,  // false, or xy or [x,y] or function(x,y){ return [x,y] }
       delay: 0
     };
-    ```
+```
     
-    `rwoodie/scriptaculous/src/builder.js`
-    ```var parentTag = this.NODEMAP[elementName] || 'div';
+`rwoodie/scriptaculous/src/builder.js`
+```javascript
+    var parentTag = this.NODEMAP[elementName] || 'div';
     var parentElement = document.createElement(parentTag);
     // Variable: parentElement
     // Function: document.createElement(parentTag)
@@ -104,5 +106,7 @@ When you're done editing this file, save it, commit it, and push it to your "ass
                 attrs + "></" + elementName + ">";
             } catch(e) {}
             element = parentElement.firstChild || null;
-    ```
-    
+
+
+```
+* Line 43 has a floating number using 0.02     
