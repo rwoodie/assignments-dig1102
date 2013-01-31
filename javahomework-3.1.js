@@ -35,45 +35,62 @@ var marker;
 function initialize() {
     document.upload.lat.value = geoip_latitude();
     document.upload.lng.value = geoip_longitude();
-    geocoder = new google.maps.Geocoder();
+    var geocoder = new google.maps.Geocoder();
     var latlng = new google.maps.LatLng(geoip_latitude(), geoip_longitude());
-    var myOptions = {
-            zoom: 8,
-            center: latlng,
-            mapTypeId: 'roadmap'
-        }
-        map = new google.maps.Map(document.getElementById("gmap"), myOptions);
+    var myOptions = 
+    {
+        zoom: 8,
+        center: latlng,
+        mapTypeId: 'roadmap'
+    }
+    
+    map = new google.maps.Map(document.getElementById("gmap"), myOptions);
     //var ctaLayer = new google.maps.KmlLayer('http://www.koolbusiness.com/list.kml');
     //ctaLayer.setMap(map);
     google.maps.event.addListener(map, "click", gAdd);
 
-    geocoder.geocode({
+    geocoder.geocode(
+    
+    {
         'latLng': latlng
-    }, function (results, status) {
-        if (status == google.maps.GeocoderStatus.OK) {
+    }
+    
+    , function (results, status) 
+    
+    {
+        if (status == google.maps.GeocoderStatus.OK) 
+        {
             document.getElementById("message").innerHTML = results[5].formatted_address;
             document.upload.place.value = results[5].formatted_address;
-        } else {
-
+        } 
+        
+        else {
         }
     });
 
     if (navigator.geolocation) {
 
-        browserSupportFlag = true;
+    var browserSupportFlag = true;
         navigator.geolocation.getCurrentPosition(function (position) {
-            initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+    var initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
-            var latlng = initialLocation
-                geocoder.geocode({
-                    'latLng': latlng
-                }, function (results, status) {
-                    if (status == google.maps.GeocoderStatus.OK) {
-                        if (results[1]) {
-                            marker = new google.maps.Marker({
-                                position: latlng,
-                                map: map
-                            });
+    var latlng = initialLocation
+        geocoder.geocode(
+        {
+           'latLng': latlng
+        }
+           , function (results, status) 
+        
+        {
+            if (status == google.maps.GeocoderStatus.OK) 
+        {
+            if (results[1]) {
+            var marker = new google.maps.Marker(
+                
+        {
+            position: latlng,
+            map: map
+        });
                             infowindow.setContent('<a href="/li?lat=' + latlng.lat() + '&lon=' + latlng.lng() + '">' + results[1].formatted_address + '</a>');
                             infowindow.open(map, marker);
                             document.upload.lat.value = latlng.lat();
