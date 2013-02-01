@@ -27,7 +27,9 @@ count()
 // Using the almond style for brackets could make the code cleaner
 </script> 
 
-var geocoder;
+
+
+var geocoder; 
 var map;
 var infowindow = new google.maps.InfoWindow();
 var marker;
@@ -45,10 +47,7 @@ function initialize() {
     }
     
     map = new google.maps.Map(document.getElementById("gmap"), myOptions);
-    //var ctaLayer = new google.maps.KmlLayer('http://www.koolbusiness.com/list.kml');
-    //ctaLayer.setMap(map);
     google.maps.event.addListener(map, "click", gAdd);
-
     geocoder.geocode(
     
     {
@@ -91,11 +90,12 @@ function initialize() {
             position: latlng,
             map: map
         });
-                            infowindow.setContent('<a href="/li?lat=' + latlng.lat() + '&lon=' + latlng.lng() + '">' + results[1].formatted_address + '</a>');
-                            infowindow.open(map, marker);
-                            document.upload.lat.value = latlng.lat();
-                            document.upload.lng.value = latlng.lng();
-                            document.upload.place.value = results[5].formatted_address
+                            
+            infowindow.setContent('<a href="/li?lat=' + latlng.lat() + '&lon=' + latlng.lng() + '">' + results[1].formatted_address + '</a>');
+            infowindow.open(map, marker);
+            document.upload.lat.value = latlng.lat();
+            document.upload.lng.value = latlng.lng();
+            document.upload.place.value = results[5].formatted_address
 
                         } else {
                             alert("No results found");
@@ -108,18 +108,29 @@ function initialize() {
         }, function () {
             handleNoGeolocation(browserSupportFlag);
         });
-    } else if (google.gears) {
+    } 
+    
+    else if (google.gears) 
+    
+    {
         // Try Google Gears Geolocation
         browserSupportFlag = true;
         var geo = google.gears.factory.create('beta.geolocation');
-        geo.getCurrentPosition(function (position) {
+        geo.getCurrentPosition(function (position) 
+        
+        {
             initialLocation = new google.maps.LatLng(position.latitude, position.longitude);
             var latlng = initialLocation
-                geocoder.geocode({
+            geocoder.geocode(
+       
+        {
                     'latLng': latlng
-                }, function (results, status) {
-                    if (status == google.maps.GeocoderStatus.OK) {
-                        if (results[1]) {
+        }, function (results, status) 
+        
+        {
+            if (status == google.maps.GeocoderStatus.OK) 
+            {
+            if (results[1]) {
                             marker = new google.maps.Marker({
                                 position: latlng,
                                 map: map
