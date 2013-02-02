@@ -190,12 +190,15 @@ function gAdd(ev) {
 
 }
 
-function toggleBounce() {
+function toggleBounce() 
+
+{
     if (marker.getAnimation() != null) {
         alert("test");
         marker.setAnimation(null);
 
-    } else {
+    } else 
+    {
         marker.setAnimation(google.maps.Animation.BOUNCE);
 
     }
