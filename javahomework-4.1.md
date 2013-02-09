@@ -119,3 +119,12 @@ THREE.ColorKeywords = { "aliceblue": 0xF0F8FF, "antiquewhite": 0xFAEBD7, "aqua":
 // Here is a dictionary and the color keywords or hexidecimals are the keys inside the dictionary 
 
 ```
+
+```javascript
+var properties = [ 'left', 'top', 'right', 'bottom', 'width', 'height', 'border', 'borderLeft',
+'borderTop', 'borderRight', 'borderBottom', 'margin', 'marginLeft', 'marginTop', 'marginRight',
+'marginBottom', 'padding', 'paddingLeft', 'paddingTop', 'paddingRight', 'paddingBottom', 'color',
+'backgroundColor', 'fontSize', 'fontWeight', 'display', 'overflow', 'cursor' ];
+
+```
+* Here is an example of a list and all of the strings inside the square brackets are indexes
