@@ -31,39 +31,61 @@ jQuery.fn = jQuery.prototype =
 		}
 
 		// Handle HTML strings
-		if ( typeof selector === "string" ) {
+		if ( typeof selector === "string" ) 
+        // If this is true, we execute lines 39-138
+        // If false execute line 151
+        {
 			// Are we dealing with HTML string or an ID?
 			match = quickExpr.exec( selector );
 
 			// Verify a match, and that no context was specified for #id
-			if ( match && (match[1] || !context) ) {
+			if ( match && (match[1] || !context) ) 
+            // If a match is found and no context was found, execute lines 48-110
+            // There is an else if on line 114 for this if statement that will be executed if line 42 is false
+            // See line 114 for notes
+            {
 
 				// HANDLE: $(html) -> $(array)
-				if ( match[1] ) {
+				if ( match[1] ) 
+                
+                {
 					doc = (context ? context.ownerDocument || context : document);
 
 					// If a single string is passed in and it's a single tag
 					// just do a createElement and skip the rest
 					ret = rsingleTag.exec( selector );
 
-					if ( ret ) {
-						if ( jQuery.isPlainObject( context ) ) {
+					if ( ret ) 
+                    
+                    {
+						if ( jQuery.isPlainObject( context ) ) 
+                        
+                        {
 							selector = [ document.createElement( ret[1] ) ];
 							jQuery.fn.attr.call( selector, context, true );
 
-						} else {
+						} 
+                        
+                        else 
+                        {
 							selector = [ doc.createElement( ret[1] ) ];
 						}
 
-					} else {
-						ret = buildFragment( [ match[1] ], [ doc ] );
-						selector = (ret.cacheable ? ret.fragment.cloneNode(true) : ret.fragment).childNodes;
 					}
+                    
+                        else 
+                        {
+						    ret = buildFragment( [ match[1] ], [ doc ] );
+						    selector = (ret.cacheable ? ret.fragment.cloneNode(true) : ret.fragment).childNodes;
+					    }
 					
 					return jQuery.merge( this, selector );
 					
 				// HANDLE: $("#id")
-				} else {
+				} 
+                    else 
+                
+                {
 					elem = document.getElementById( match[2] );
 
 					if ( elem ) 
@@ -87,33 +109,46 @@ jQuery.fn = jQuery.prototype =
 				}
 
 			// HANDLE: $("TAG")
-			} else if ( !context && /^\w+$/.test( selector ) ) {
+			} // This else if statement is connected to line 42
+              // If line 114 is true do lines 117-120 and return the output. If false check the next else if on line 125  
+            else if ( !context && /^\w+$/.test( selector ) ) 
+            
+            {
 				this.selector = selector;
 				this.context = document;
 				selector = document.getElementsByTagName( selector );
 				return jQuery.merge( this, selector );
 
 			// HANDLE: $(expr, $(...))
-			} else if ( !context || context.jquery ) {
+            } 
+            
+            else if ( !context || context.jquery ) 
+            // This else if statement is connected to line 114. Execute line 128 if true. If false go to the else statement on line 134
+            {
 				return (context || rootjQuery).find( selector );
 
 			// HANDLE: $(expr, context)
 			// (which is just equivalent to: $(context).find(expr)
-			} else 
-            {
+		    }   
+            
+            else 
+            { // This else statement is connected to line 125. If line 125 is false, execute line 136.
 				return jQuery( context ).find( selector );
 			}
 
 		// HANDLE: $(function)
 		// Shortcut for document ready
-		} else if ( jQuery.isFunction( selector ) ) {
-			return rootjQuery.ready( selector );
-		}
+		} 
+            else if ( jQuery.isFunction( selector ) ) 
+            {
+			    return rootjQuery.ready( selector );
+		    }
 
-		if (selector.selector !== undefined) {
-			this.selector = selector.selector;
-			this.context = selector.context;
-		}
+		if (selector.selector !== undefined) 
+            {
+			    this.selector = selector.selector;
+			    this.context = selector.context;
+		    }
 
 		return jQuery.makeArray( selector, this );
 	},
