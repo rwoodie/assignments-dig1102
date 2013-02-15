@@ -46,7 +46,8 @@ jQuery.fn = jQuery.prototype =
             {
 
 				// HANDLE: $(html) -> $(array)
-				if ( match[1] ) 
+				if ( match[1] ) // If line 49 is true, execute lines 52 - 85
+                                // If false, do line 83 to return output
                 
                 {
 					doc = (context ? context.ownerDocument || context : document);
@@ -55,7 +56,7 @@ jQuery.fn = jQuery.prototype =
 					// just do a createElement and skip the rest
 					ret = rsingleTag.exec( selector );
 
-					if ( ret ) 
+					if ( ret ) // If
                     
                     {
 						if ( jQuery.isPlainObject( context ) ) 
