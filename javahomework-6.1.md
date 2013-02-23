@@ -62,3 +62,33 @@ propFix:
 
 
 ```
+
+```javascript
+
+UI.Select.prototype.setOptions = function ( options ) 
+
+{
+
+    while ( this.dom.children.length > 0 ) 
+    {
+
+		this.dom.removeChild( this.dom.firstChild );
+
+	}
+
+	for ( var key in options ) 
+    {
+
+		var option = document.createElement( 'option' );
+		option.value = key;
+		option.innerHTML = options[ key ];
+		this.dom.appendChild( option );
+
+	}
+
+	return this;
+
+};
+
+```
+* Line 72 is a conditional while loop. It would be the diamond shape in the diagram. If line 72 is true, do line 75
