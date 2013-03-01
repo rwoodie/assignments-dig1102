@@ -153,3 +153,31 @@ function showHide( elements, show )
 * The name of the function is showHide
 * The arguments are elements, show 
 * The return is on line 107 with return elements
+
+behave_js/behave.js: 69-82
+```javascript
+ get: function doGetCaretPosition() 
+ {
+                var caretPos = 0;
+
+                if (typeof defaults.textarea.selectionStart === 'number') 
+                {
+                    caretPos = defaults.textarea.selectionStart;
+                } else if (document.selection) 
+                
+                {
+                    defaults.textarea.focus();
+                    var selection = document.selection.createRange();
+
+                    selection.moveStart('character', -defaults.textarea.value.length);
+                    caretPos = selection.text.length;
+                }
+                return caretPos;
+},
+
+```
+* The name of the function is doGetCaretPosition
+* The function has no arguments
+* Variable caretPos is used 3 times inside the scope with 3 different values. However, line 70 has 'var' in front of the variable.
+* the scope for this function is lines 69-82
+* The return function is on line 81
