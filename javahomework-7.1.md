@@ -181,3 +181,21 @@ behave_js/behave.js: 69-82
 * Variable caretPos is used 3 times inside the scope with 3 different values. However, line 70 has 'var' in front of the variable.
 * the scope for this function is lines 69-82
 * The return function is on line 81
+
+three_js/editor/js/ui/Sidebar.Geometry.js: 113-121
+```javascript
+    function getGeometryInstanceName( geometry ) 
+    {
+
+		for ( var key in geometryClasses ) {
+
+			if ( geometry instanceof geometryClasses[ key ] ) return key;
+
+		}
+
+	}
+```
+* The name of the function is getGeometryInstanceName
+* The argument is geometry
+* The scope of the function is within 113-121
+* The return is on line 117 with key
