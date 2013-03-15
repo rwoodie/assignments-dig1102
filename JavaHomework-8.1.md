@@ -69,3 +69,29 @@ Tween.prototype = {
 * Prototype: Tween.prototype = {...} Lines 365-407
 * Arguments: elem, options, prop, end, easing, unit
 * Constructor: I think this is the constructor - Tween.prototype.init
+
+
+`src/speed/jquery-basis.js:19-22`
+```javascript
+var jQuery = function( selector, context ) {
+    	// The jQuery object is actually just the init constructor 'enhanced'
+		return new jQuery.fn.init( selector, context );
+	},
+```
+* Function: jQuery
+* Arguments: selector, context
+* return: new instance of jQuery.fn.init (constructor)
+
+
+`src/speed/jquery-basis.js:74-81`
+```javascript
+jQuery.fn = jQuery.prototype = {
+    init: function( selector, context ) {
+		var match, elem, ret, doc;
+
+		// Handle $(""), $(null), or $(undefined)
+		if ( !selector ) {
+			return this;
+		}
+```
+* Prototype:  jQuery.prototype = {...} Lines 74-300
