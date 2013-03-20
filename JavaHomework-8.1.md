@@ -1,4 +1,4 @@
-`src/data.js:24-32`
+g`src/data.js:24-32`
 ```javascript
 Data.prototype = {
     locker: function( owner ) {
