@@ -129,4 +129,12 @@ var divide = function(a, b)
 }
 
     assert.equal(divide(+1, +1), +1);
+    assert.equal(divide(+1, -1), -1);
+//  assert.equal(divide(+1, +0), +0); this returns an error
+    assert.equal(divide(+0, +1), +0);
+    assert.equal(divide(+0, -1), +0);
+//  assert.equal(divide(+0, +0), +0); this returns an error
+    assert.equal(divide(-1, +1), -1);
+    assert.equal(divide(-1, -1), +1);
+//  assert.equal(divide(-1, +0), +0); this returns an error
     
