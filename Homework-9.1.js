@@ -96,6 +96,7 @@ var multiply = function(a, b)
     return a * b;
 }
 
+{
     assert.equal(multiply(+1, +1), +1);
     assert.equal(multiply(+1, -1), -1);
     assert.equal(multiply(+1, +0), +0);
@@ -105,3 +106,27 @@ var multiply = function(a, b)
     assert.equal(multiply(-1, +1), -1);
     assert.equal(multiply(-1, -1), +1);
     assert.equal(multiply(-1, +0), +0);
+}
+
+/**
+ * math | one | two | value
+ * ===+=====+=====+======
+ * /    | +1  | +1  | +1
+ * /    | +1  | -1  | -1
+ * /    | +1  | +0  | +0
+ * /    | +0  | +1  | +0
+ * /    | +0  | -1  | +0
+ * /    | +0  | +0  | +0
+ * /    | -1  | +1  | -1
+ * /    | -1  | -1  | +1
+ * /    | -1  | +0  | +0
+ */
+ 
+//This is for division
+var divide = function(a, b)
+{
+    return a / b;
+}
+
+    assert.equal(divide(+1, +1), +1);
+    
