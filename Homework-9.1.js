@@ -58,12 +58,13 @@ var addition = function(a, b)
  * -    | -1  | +0  | -1
  */
  
-    //This is for subtraction 
-    var subtraction = function(a, b)
+//This is for subtraction 
+var subtraction = function(a, b)
 {
     return a - b;
 }
 
+{
     assert.equal(subtraction(+1, +1), +0);
     assert.equal(subtraction(+1, -1), +2);
     assert.equal(subtraction(+1, +0), +1);
@@ -73,4 +74,27 @@ var addition = function(a, b)
     assert.equal(subtraction(-1, +1), -2);
     assert.equal(subtraction(-1, -1), +0);
     assert.equal(subtraction(-1, +0), -1);
+}
+
+/**
+ * math | one | two | value
+ * ===+=====+=====+======
+ * x    | +1  | +1  | +1
+ * x    | +1  | -1  | -1
+ * x    | +1  | +0  | +0
+ * x    | +0  | +1  | +0
+ * x    | +0  | -1  | +0
+ * x    | +0  | +0  | +0
+ * x    | -1  | +1  | -1
+ * x    | -1  | -1  | +1
+ * x    | -1  | +0  | +0
+ */
+ 
+//This is for multiplication
+var multiply = function(a, b)
+{
+    return a * b;
+}
+
+    assert.equal(multiply(+1, +1), +1);
     
