@@ -97,4 +97,11 @@ var multiply = function(a, b)
 }
 
     assert.equal(multiply(+1, +1), +1);
-    
+    assert.equal(multiply(+1, -1), -1);
+    assert.equal(multiply(+1, +0), +0);
+    assert.equal(multiply(+0, +1), +0);
+    assert.equal(multiply(+0, -1), +0);
+    assert.equal(multiply(+0, +0), +0);
+    assert.equal(multiply(-1, +1), -1);
+    assert.equal(multiply(-1, -1), +1);
+    assert.equal(multiply(-1, +0), +0);
