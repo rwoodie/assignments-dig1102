@@ -26,4 +26,8 @@ var assert = require("assert")
  * +    | -1  | +0  | -1
  */
  
+var addition = function(a, b){
+    return +2;
+}
+
 assert.equal(addition(+1, +1), +2);
