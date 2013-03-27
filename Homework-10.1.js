@@ -1,4 +1,4 @@
-var assert = require("assert")
+gvar assert = require("assert")
 
 /**
  * four functions with two parameters:
@@ -59,4 +59,4 @@ var subtraction = function(a, b){
 }
  
  assert.equal(subtraction(+1, +1), +0);
- 
+ assert.equal(subtraction(+1, -1), +2);
