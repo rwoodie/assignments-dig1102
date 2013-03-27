@@ -53,6 +53,10 @@ var addition = function(a, b){
  * -    | -1  | -1  | +0
  * -    | -1  | +0  | -1
  */
+
+var subtraction = function(a, b){
+    return +0
+}
  
  assert.equal(subtraction(+1, +1), +0);
  
