@@ -63,4 +63,4 @@ var divide = function(a, b){
 
     assert.equal(divide(+1, +1), +1);
     assert.equal(divide(+1, -1), -1);
-    
+    assert.equal(divide(+1, +0), +0);
