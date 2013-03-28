@@ -58,7 +58,7 @@ var addition = function(a, b){
 
 //A test for division
 var divide = function(a, b){
-    return +1;
+    return a / b;
 }
 
     assert.equal(divide(+1, +1), +1);
