@@ -26,6 +26,7 @@ var assert = require("assert")
  * +    | -1  | +0  | -1
  */
 
+//Testing addition
 var addition = function(a, b){
 
     return a + b;
@@ -34,4 +35,10 @@ var addition = function(a, b){
     assert.equal(addition(+1, +1), +2);
     assert.equal(addition(+1, -1), +0);
     assert.equal(addition(+1, +0), +1);
+    assert.equal(addition(+0, +1), +1);
+    assert.equal(addition(+0, -1), -1);
+    assert.equal(addition(+0, +0), +0);
+    assert.equal(addition(-1, +1), +0);
+    assert.equal(addition(-1, -1), -2);
+    assert.equal(addition(-1, +0), -1);
     
