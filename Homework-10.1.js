@@ -59,7 +59,7 @@ var addition = function(a, b){
 //A test for division
 var divide = function(a, b){
     
-       if (a == 0 || b == 0)
+       if (a == +0 || b == +0)
        {
        console.log('not divisible by zero');
        }  
@@ -71,3 +71,10 @@ var divide = function(a, b){
     assert.equal(divide(+1, +1), +1);
     assert.equal(divide(+1, -1), -1);
     assert.equal(divide(+1, +0), +0);
+    assert.equal(divide(+0, +1), +0);
+    assert.equal(divide(+0, -1), +0);
+    assert.equal(divide(+0, +0), +0);
+    assert.equal(divide(-1, +1), -1);
+    assert.equal(divide(-1, -1), +1);
+    assert.equal(divide(-1, +0), +0);
+    
