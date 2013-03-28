@@ -31,4 +31,6 @@ var addition = function(a, b){
     return +2;
 }
 
-assert.equal(addition(+1, +1), +2);
+    assert.equal(addition(+1, +1), +2);
+    assert.equal(addition(+1, -1), +0);
+    
