@@ -42,3 +42,21 @@ var addition = function(a, b){
     assert.equal(addition(-1, -1), -2);
     assert.equal(addition(-1, +0), -1);
     
+/**
+ * math | one | two | value
+ * ===+=====+=====+======
+ * /    | +1  | +1  | +1
+ * /    | +1  | -1  | -1
+ * /    | +1  | +0  | +0
+ * /    | +0  | +1  | +0
+ * /    | +0  | -1  | +0
+ * /    | +0  | +0  | +0
+ * /    | -1  | +1  | -1
+ * /    | -1  | -1  | +1
+ * /    | -1  | +0  | +0
+ */
+
+//A test for division
+
+    assert.equal(divide(+1, +1), +1);
+    
