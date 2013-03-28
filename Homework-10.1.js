@@ -58,7 +58,14 @@ var addition = function(a, b){
 
 //A test for division
 var divide = function(a, b){
-    return a / b;
+    
+       if (a == 0 || b == 0)
+       {
+       console.log('not divisible by zero');
+       }  
+     
+       return (a / b);
+           
 }
 
     assert.equal(divide(+1, +1), +1);
