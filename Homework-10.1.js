@@ -28,6 +28,10 @@ var assert = require("assert")
  
 var division = function(a, b){
 
+    if(!a || !b)
+    {
+        return 0;
+    }
     return a / b;
 
 }
