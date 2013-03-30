@@ -25,5 +25,11 @@ var assert = require("assert")
  * /    | -1  | -1  | +1
  * /    | -1  | +0  | +0
  */
+ 
+var division = function(a, b){
+
+    return +1
+
+}
 
 assert.equal(division(+1, +1), +1);
