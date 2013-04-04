@@ -43,4 +43,21 @@ var addition = function(a, b)
     assert.equal(addition(-1, -1), -2);
     assert.equal(addition(-1, +0), -1);
 }
+
+/**
+ * math | one | two | value
+ * ===+=====+=====+======
+ * x    | +1  | +1  | +1
+ * x    | +1  | -1  | -1
+ * x    | +1  | +0  | +0
+ * x    | +0  | +1  | +0
+ * x    | +0  | -1  | +0
+ * x    | +0  | +0  | +0
+ * x    | -1  | +1  | -1
+ * x    | -1  | -1  | +1
+ * x    | -1  | +0  | +0
+ */
+ 
+    assert.equal(multiplication(+1, +1), +1);
+    
     
