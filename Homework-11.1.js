@@ -63,9 +63,17 @@ var multiplication = function(a, b)
     return a*b;
 }
  
+{ 
     assert.equal(multiplication(+1, +1), +1);
     assert.equal(multiplication(+1, -1), -1);
-    
+    assert.equal(multiplication(+1, +0), +0);
+    assert.equal(multiplication(+0, +1), +0);
+    assert.equal(multiplication(+0, -1), +0);
+    assert.equal(multiplication(+0, +0), +0);
+    assert.equal(multiplication(-1, +1), -1);
+    assert.equal(multiplication(-1, -1), +1);
+    assert.equal(multiplication(-1, +0), +0);
+}
     
     
     
