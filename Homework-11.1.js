@@ -27,7 +27,7 @@ var assert = require("assert")
  */
 
 var multiplication = function(a, b){
-    return +1;
+    return a * b;
 }
     
  
