@@ -63,7 +63,7 @@ var division = function(a, b){
 }
 
     assert.equal(division(+1, +1), +1);
-    
+    assert.equal(division(+1, -1), -1);
     
     
     
