@@ -46,7 +46,13 @@ var multiplication = function(a, b){
 }
 
 //Testing division
-var division = function(a, b){
+var division = function(a, b)
+
+{
+    if(!a || !b)
+    {
+        return 0;
+    }
     return a / b;
 }
 
@@ -65,7 +71,7 @@ var division = function(a, b){
     assert.equal(division(+1, +1), +1);
     assert.equal(division(+1, -1), -1);
     assert.equal(division(+1, +0), +0);
-    
+    assert.equal(division(+0, +1), +0);
     
     
     
