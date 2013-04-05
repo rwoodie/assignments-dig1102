@@ -45,6 +45,11 @@ var multiplication = function(a, b){
     return a * b;
 }
 
+//Testing division
+var division = function(a, b){
+    return +1
+}
+
 { 
     assert.equal(multiplication(+1, +1), +1);
     assert.equal(multiplication(+1, -1), -1);
@@ -58,6 +63,7 @@ var multiplication = function(a, b){
 }
 
     assert.equal(division(+1, +1), +1);
+    
     
     
     
