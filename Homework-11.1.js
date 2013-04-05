@@ -25,12 +25,27 @@ var assert = require("assert")
  * x    | -1  | -1  | +1
  * x    | -1  | +0  | +0
  */
-
+ 
+/**
+ * math | one | two | value
+ * ===+=====+=====+======
+ * x    | +1  | +1  | +1
+ * x    | +1  | -1  | -1
+ * x    | +1  | +0  | +0
+ * x    | +0  | +1  | +0
+ * x    | +0  | -1  | +0
+ * x    | +0  | +0  | +0
+ * x    | -1  | +1  | -1
+ * x    | -1  | -1  | +1
+ * x    | -1  | +0  | +0
+ */ 
+ 
+//Testing multiplication
 var multiplication = function(a, b){
     return a * b;
 }
-    
- 
+
+{ 
     assert.equal(multiplication(+1, +1), +1);
     assert.equal(multiplication(+1, -1), -1);
     assert.equal(multiplication(+1, +0), +0);
@@ -40,7 +55,10 @@ var multiplication = function(a, b){
     assert.equal(multiplication(-1, +1), -1);
     assert.equal(multiplication(-1, -1), +1);
     assert.equal(multiplication(-1, +0), +0);
+}
 
+    assert.equal(division(+1, +1), +1);
+    
     
     
     
