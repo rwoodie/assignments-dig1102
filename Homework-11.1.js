@@ -15,38 +15,6 @@ var assert = require("assert")
 /**
  * math | one | two | value
  * ===+=====+=====+======
- * +    | +1  | +1  | +2
- * +    | +1  | -1  | +0
- * +    | +1  | +0  | +1
- * +    | +0  | +1  | +1
- * +    | +0  | -1  | -1
- * +    | +0  | +0  | +0
- * +    | -1  | +1  | +0
- * +    | -1  | -1  | -2
- * +    | -1  | +0  | -1
- */
- 
-var addition = function(a, b)
-{
-    return a + b;
-}
-
-{
-    //Testing addition
-    assert.equal(addition(+1, +1), +2);
-    assert.equal(addition(+1, -1), +0);
-    assert.equal(addition(+1, +0), +1);
-    assert.equal(addition(+0, +1), +1);
-    assert.equal(addition(+0, -1), -1);
-    assert.equal(addition(+0, +0), +0);
-    assert.equal(addition(-1, +1), +0);
-    assert.equal(addition(-1, -1), -2);
-    assert.equal(addition(-1, +0), -1);
-}
-
-/**
- * math | one | two | value
- * ===+=====+=====+======
  * x    | +1  | +1  | +1
  * x    | +1  | -1  | -1
  * x    | +1  | +0  | +0
@@ -58,22 +26,9 @@ var addition = function(a, b)
  * x    | -1  | +0  | +0
  */
  
-var multiplication = function(a, b)
-{
-    return a*b;
-}
+ assert.equal(multiplication(+1, +1), +1);
  
-{ 
-    assert.equal(multiplication(+1, +1), +1);
-    assert.equal(multiplication(+1, -1), -1);
-    assert.equal(multiplication(+1, +0), +0);
-    assert.equal(multiplication(+0, +1), +0);
-    assert.equal(multiplication(+0, -1), +0);
-    assert.equal(multiplication(+0, +0), +0);
-    assert.equal(multiplication(-1, +1), -1);
-    assert.equal(multiplication(-1, -1), +1);
-    assert.equal(multiplication(-1, +0), +0);
-}
+
     
     
     
