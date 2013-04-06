@@ -13,72 +13,24 @@ var assert = require("assert")
 
 
 /**
- * math | one | two | value
+ * op | one | two | value
  * ===+=====+=====+======
- * x    | +1  | +1  | +1
- * x    | +1  | -1  | -1
- * x    | +1  | +0  | +0
- * x    | +0  | +1  | +0
- * x    | +0  | -1  | +0
- * x    | +0  | +0  | +0
- * x    | -1  | +1  | -1
- * x    | -1  | -1  | +1
- * x    | -1  | +0  | +0
+ * +    | +1  | +1  | +2
+ * +    | +1  | -1  | +0
+ * +    | +1  | +0  | +1
+ * +    | +0  | +1  | +1
+ * +    | +0  | -1  | -1
+ * +    | +0  | +0  | +0
+ * +    | -1  | +1  | +0
+ * +    | -1  | -1  | -2
+ * +    | -1  | +0  | -1
  */
  
-/**
- * math | one | two | value
- * ===+=====+=====+======
- * x    | +1  | +1  | +1
- * x    | +1  | -1  | -1
- * x    | +1  | +0  | +0
- * x    | +0  | +1  | +0
- * x    | +0  | -1  | +0
- * x    | +0  | +0  | +0
- * x    | -1  | +1  | -1
- * x    | -1  | -1  | +1
- * x    | -1  | +0  | +0
- */ 
+ assert.equal(addition(+1, +1), +2);
  
-//Testing multiplication
-var multiplication = function(a, b){
-    return a * b;
-}
 
-//Testing division
-var division = function(a, b)
+ 
 
-{
-    if(!a || !b)
-    {
-        return 0;
-    }
-    return a / b;
-}
-
-{ 
-    assert.equal(multiplication(+1, +1), +1);
-    assert.equal(multiplication(+1, -1), -1);
-    assert.equal(multiplication(+1, +0), +0);
-    assert.equal(multiplication(+0, +1), +0);
-    assert.equal(multiplication(+0, -1), +0);
-    assert.equal(multiplication(+0, +0), +0);
-    assert.equal(multiplication(-1, +1), -1);
-    assert.equal(multiplication(-1, -1), +1);
-    assert.equal(multiplication(-1, +0), +0);
-}
-
-{
-    assert.equal(division(+1, +1), +1);
-    assert.equal(division(+1, -1), -1);
-    assert.equal(division(+1, +0), +0);
-    assert.equal(division(+0, +1), +0);
-    assert.equal(division(+0, -1), +0);
-    assert.equal(division(+0, +0), +0);
-    assert.equal(division(-1, +1), -1);
-    assert.equal(division(-1, -1), +1);
-    assert.equal(division(-1, +0), +0);
-}
     
     
     
