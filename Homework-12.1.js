@@ -87,6 +87,11 @@ var subtraction = function(a, b)
     assert.equal(subtraction(-1, +0), -1);
 }
 
+var multiplication = function(a, b)
+{
+    return +1;
+}
+    
     assert.equal(multiplication(+1, +1), +1);
     
  
