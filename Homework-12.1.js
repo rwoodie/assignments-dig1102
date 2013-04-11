@@ -39,6 +39,20 @@ var assert = require("assert")
  * -    | -1  | +0  | -1
  */
  
+ /**
+ * op | one | two | value
+ * ===+=====+=====+======
+ * x    | +1  | +1  | +1
+ * x    | +1  | -1  | -1
+ * x    | +1  | +0  | +0
+ * x    | +0  | +1  | +0
+ * x    | +0  | -1  | +0
+ * x    | +0  | +0  | +0
+ * x    | -1  | +1  | -1
+ * x    | -1  | -1  | +1
+ * x    | -1  | +0  | +0
+ */
+ 
 var addition = function(a, b)
 {
     return a + b;
@@ -61,7 +75,7 @@ var subtraction = function(a, b)
     return a - b;
 }
 
-
+{//This is a test for subtraction
     assert.equal(subtraction(+1, +1), +0);
     assert.equal(subtraction(+1, -1), +2);
     assert.equal(subtraction(+1, +0), +1);
@@ -71,5 +85,8 @@ var subtraction = function(a, b)
     assert.equal(subtraction(-1, +1), -2);
     assert.equal(subtraction(-1, -1), +0);
     assert.equal(subtraction(-1, +0), -1);
+}
 
+    assert.equal(multiplication(+1, +1), +1);
+    
  
