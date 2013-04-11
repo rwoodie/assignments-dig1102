@@ -58,7 +58,7 @@ var addition = function(a, b)
 
 var subtraction = function(a, b)
 {
-    return +0;
+    return a - b;
 }
 
 
