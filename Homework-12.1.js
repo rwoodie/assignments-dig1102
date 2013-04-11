@@ -92,6 +92,7 @@ var multiplication = function(a, b)
     return a * b;
 }
     
+{//This is a test for multiplication
     assert.equal(multiplication(+1, +1), +1);
     assert.equal(multiplication(+1, -1), -1);
     assert.equal(multiplication(+1, +0), +0);
@@ -101,4 +102,5 @@ var multiplication = function(a, b)
     assert.equal(multiplication(-1, +1), -1);
     assert.equal(multiplication(-1, -1), +1);
     assert.equal(multiplication(-1, +0), +0);
+}
  
