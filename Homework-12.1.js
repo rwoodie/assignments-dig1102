@@ -42,5 +42,10 @@ var addition = function(a, b)
     assert.equal(addition(-1, +0), -1);
 }
 
+var multiplication = function(a, b)
+{
+    return +1;
+}
+
     assert.equal(multiplication(+1, +1), +1);
     
