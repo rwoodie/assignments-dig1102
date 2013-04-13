@@ -25,7 +25,7 @@ var assert = require("assert")
  * +    | -1  | +0  | -1
  */
  
-var addition = function(a, b)
+/**var addition = function(a, b)
 {
     return a + b;
 }
@@ -41,4 +41,33 @@ var addition = function(a, b)
     assert.equal(addition(-1, -1), -2);
     assert.equal(addition(-1, +0), -1);
 }
+*/
+
+inputs = [
+    [+1, +1],
+    [+1, -1],
+    [+1, +0],
+    [+0, +1],
+    [+0, -1],
+    [+0, +0],
+    [-1, +1],
+    [-1, -1],
+    [-1, +0],
+];
+
+outputs = [
+        +2,
+        +0,
+        +1,
+        +1,
+        -1,
+        +0,
+        +0,
+        -2,
+        -1,
+    ];
     
+for ($i = 0; $i < 9; $i++)
+{
+    assert(add($inputs[$i][0], $inputs[$i][1]) == $outputs[$i]);
+}
