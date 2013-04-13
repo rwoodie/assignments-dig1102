@@ -29,7 +29,8 @@ var addition = function(a, b)
 {
     return a + b;
 }
- 
+
+{//This test is for addition
     assert.equal(addition(+1, +1), +2);
     assert.equal(addition(+1, -1), +0);
     assert.equal(addition(+1, +0), +1);
@@ -39,4 +40,5 @@ var addition = function(a, b)
     assert.equal(addition(-1, +1), +0);
     assert.equal(addition(-1, -1), -2);
     assert.equal(addition(-1, +0), -1);
+}
     
