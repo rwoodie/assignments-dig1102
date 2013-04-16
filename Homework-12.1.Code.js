@@ -18,5 +18,7 @@
  */
  
 module.exports = { // PROD CODE
-    hallway: {}
+    hallway: {
+    doors: []
+    }
 }
