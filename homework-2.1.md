@@ -71,11 +71,16 @@ When you're done editing this file, save it, commit it, and push it to your "ass
     var parentElement = document.createElement(parentTag);
     // Variable: parentElement
     // Function: document.createElement(parentTag)
+```
+
+```javascript    
     try { // prevent IE "feature": http://dev.rubyonrails.org/ticket/2707
       parentElement.innerHTML = "<" + elementName + "></" + elementName + ">";
     } catch(e) {}
     var element = parentElement.firstChild || null;
+```
 
+```javascript
     // see if browser added wrapping tags
     if(element && (element.tagName.toUpperCase() != elementName))
       element = element.getElementsByTagName(elementName)[0];
