@@ -22,3 +22,4 @@ module.exports = { // PROD CODE
     doors: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     }
 }
+
