@@ -19,7 +19,8 @@
  
 module.exports = { //Production code
     hallway: {
-    doors: [0,0,0,0,0,0,0,0,0,0]
+    doors: [0,0,0,0,0,0,0,0,0,0],
+    toggle: []
     }
 
 }
