@@ -22,6 +22,10 @@ for (var index = 0; index <hundredDoors.hallway.doors.length; index++){
 assert(hundredDoors.hallway.toggle)
 
 // test: are all the Doors "open"?
+for(var index = 1; index <hundredDoors.hallway.doors.length; index++){
+    var toggle = hundredDoors.hallway.doors[index];
+    assert.equal(toggle, 1);
+}
 
 // do: PASS 2 -- take a walk down the hallway, change the state of the doors
 
