@@ -19,7 +19,7 @@ for (var index = 0; index <hundredDoors.hallway.doors.length; index++){
 }
 
 // do: PASS 1 -- take a walk down the hallway, change the state of the doors
-
+assert(hundredDoors.hallway.toggle)
 
 // test: are all the Doors "open"?
 
