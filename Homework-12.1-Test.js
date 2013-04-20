@@ -13,7 +13,10 @@ assert(hundredDoors.hallway.doors.length, 10);
 
 
 // test: are all the Doors "closed"?
-
+for (var index = 0; index <hundredDoors.hallway.doors.length; index++){
+    var door = hundredDoors.hallway.doors[index];
+    assert.equal(door, 0);
+}
 
 // do: PASS 1 -- take a walk down the hallway, change the state of the doors
 
