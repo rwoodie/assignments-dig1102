@@ -19,7 +19,7 @@
  
 module.exports = { //Production code
     hallway: {
-    d
+    doors: []
     }
 
 }
